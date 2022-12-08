@@ -39,6 +39,10 @@ plugins:
 author:
   name:  Giovanni Pasini
   email: giovanni.pasini@uniroma1.it
+  social: 
+    twitter: research_giovap
+    email: giovanni.pasini@uniroma1.it
+    
 
 # Exclude from processing.
 # The following items will not be processed, by default.
