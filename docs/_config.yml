@@ -21,9 +21,12 @@
 title: Giovanni Pasini's Website
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Giovanni is a PhD student in industrial and management engineering 
+  at "La Sapienza" University of Rome and a research collaborator
+  at the Institute of Bioimaging and Molecular Physiology (IBFM-CNR).
+  His research activity focuses on: radiomics, image processing, machine learning.
+
+
 baseurl:  # the subpath of your site, e.g. /blog
 url: https://research-giovap.github.io # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: research_giovap
@@ -36,14 +39,15 @@ remote_theme: hydecorp/hydejack@v9.1.6
 plugins:
   - jekyll-feed
   - jekyll-include-cache
+  -
 
 author:
   name:  Giovanni Pasini
   email: giovanni.pasini@uniroma1.it
   social: 
     twitter: research_giovap
-    linkedin: https://www.linkedin.com/in/giovap/
     email: giovanni.pasini@uniroma1.it
+    linkedin: https://www.linkedin.com/in/giovap/
 
 
 # Exclude from processing.
