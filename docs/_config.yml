@@ -31,7 +31,7 @@ github_username:  research-giovap
 linkedin_username: giovap
 
 # Build settings
-theme: minima
+theme: jekyll-theme-hydejack
 plugins:
   - jekyll-feed
 
