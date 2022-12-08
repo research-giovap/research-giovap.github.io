@@ -21,14 +21,14 @@
 title: Giovanni Pasini's Website
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Giovanni is a PhD student in industrial and management engineering 
+  Giovanni is a PhD student in Industrial and Management engineering 
   at "La Sapienza" University of Rome and a research collaborator
   at the Institute of Bioimaging and Molecular Physiology (IBFM-CNR).
   His research activity focuses on: radiomics, image processing, machine learning.
 
 
 baseurl:  # the subpath of your site, e.g. /blog
-url: https://research-giovap.github.io # the base hostname & protocol for your site, e.g. http://example.com
+url: http://pasinigiovanni.com/ # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: research_giovap
 # github_username:  research-giovap
 # linkedin_username: giovap
