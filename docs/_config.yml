@@ -36,6 +36,10 @@ remote_theme: hydecorp/hydejack@v9
 plugins:
   - jekyll-feed
 
+author:
+  name:  Giovanni Pasini
+  email: giovanni.pasini@uniroma1.it
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
