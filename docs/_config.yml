@@ -26,9 +26,9 @@ description: >- # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 baseurl:  # the subpath of your site, e.g. /blog
 url: https://research-giovap.github.io # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: research_giovap
-github_username:  research-giovap
-linkedin_username: giovap
+# twitter_username: research_giovap
+# github_username:  research-giovap
+# linkedin_username: giovap
 
 # Build settings
 theme: jekyll-theme-hydejack
@@ -36,13 +36,13 @@ remote_theme: hydecorp/hydejack@v9
 plugins:
   - jekyll-feed
 
-author:
-  name:  Giovanni Pasini
-  email: giovanni.pasini@uniroma1.it
-  social: 
-    twitter: research_giovap
-    linkedin: giovanni-pasini-31188b152
-    email: giovanni.pasini@uniroma1.it
+# author:
+#   name:  Giovanni Pasini
+#   email: giovanni.pasini@uniroma1.it
+#   social: 
+#     twitter: research_giovap
+#     linkedin: giovanni-pasini-31188b152
+#     email: giovanni.pasini@uniroma1.it
 
 
 # Exclude from processing.
