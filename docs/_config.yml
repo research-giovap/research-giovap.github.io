@@ -28,6 +28,7 @@ baseurl:  # the subpath of your site, e.g. /blog
 url: https://research-giovap.github.io # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: research_giovap
 github_username:  research-giovap
+linkedin_username: giovap
 
 # Build settings
 theme: minima
