@@ -31,7 +31,7 @@ url: https://research-giovap.github.io # the base hostname & protocol for your s
 # linkedin_username: giovap
 
 # Build settings
-#theme: jekyll-theme-hydejack
+# theme: jekyll-theme-hydejack
 remote_theme: hydecorp/hydejack@v9.1.6
 plugins:
   - jekyll-feed
@@ -42,7 +42,7 @@ author:
   email: giovanni.pasini@uniroma1.it
   social: 
     twitter: research_giovap
-    linkedin: giovanni-pasini-31188b152
+    linkedin: https://www.linkedin.com/in/giovap/
     email: giovanni.pasini@uniroma1.it
 
 
