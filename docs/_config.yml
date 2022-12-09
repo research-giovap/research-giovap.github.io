@@ -19,11 +19,11 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Giovanni Pasini's Website
-email: your-email@example.com
+email: giovanni.pasini@uniroma1.it
 description: >- # this means to ignore newlines until "baseurl:"
   Giovanni is a PhD student in Industrial and Management engineering 
   at "La Sapienza" University of Rome and a research collaborator
-  at the Institute of Bioimaging and Molecular Physiology (IBFM-CNR).
+  at the Institute of Molecular Bioimaging and Physiology (IBFM-CNR).
   His research activity focuses on: radiomics, image processing, machine learning.
 
 
@@ -50,13 +50,23 @@ menu:
     url:   /cv/
   
 
-author:
+gio:
   name:  Giovanni Pasini
   email: giovanni.pasini@uniroma1.it
+  about:             |
+    Giovanni is a PhD student in Industrial and Management engineering
+    at "La Sapienza" University of Rome and a research collaborator
+    at the Institute of Molecular Bioimaging and Physiology (IBFM-CNR).
+    His research activity focuses on: radiomics, image processing, machine learning.
+  
+  picture: 
+    path: assets\img\me.jpg
   social: 
     twitter: research_giovap
     linkedin: giovanni-pasini-31188b152
     email: giovanni.pasini@uniroma1.it
+
+copyright:             © Giovanni Pasini 2022. All rights reserved.
     
     
     
