@@ -262,6 +262,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.12)
   jekyll-include-cache
   jekyll-theme-hydejack
+  listen (~> 3.7.1)
   minima (~> 2.5)
   tzinfo (>= 1, < 3)
   tzinfo-data
