@@ -4,4 +4,4 @@ title: Blog
 permalink: /blog/
 ---
 
-This is my blog
+The blog is under construction

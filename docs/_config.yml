@@ -42,12 +42,10 @@ plugins:
   - jekyll-include-cache
   -
 menu:
-  - title: Blog
-    url:   /blog/
   - title: Publications
     url:   /publications/
-  - title: CV
-    url:   /cv/
+  - title: Resume
+    url:   /resume/
   
 
 gio:
