@@ -41,6 +41,14 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
   -
+menu:
+  - title: Blog
+    url:   /blog/
+  - title: Publications
+    url:   /publications/
+  - title: CV
+    url:   /cv/
+  
 
 author:
   name:  Giovanni Pasini
