@@ -41,7 +41,7 @@ permalink: /resume/
     Nov 2022 - present
 </span>
 
-- **PhD student in Industrial and Management Engineering.** 
+- **PhD student in Industrial and Management Engineering at "La Sapienza" University of Rome.** 
     <blockquote>
     <h style="color:gray;font-weight:bold;font-size:14px">
         Theme:
@@ -51,6 +51,37 @@ permalink: /resume/
     </p>
     </blockquote>
 
+<span style="color:gray"> 
+    2019 - 2021
+</span>
+
+- **Master's degree in Biomedical Engineering at "La Sapienza" University of Rome.** 
+    <blockquote>
+    <h style="color:gray;font-weight:bold;font-size:14px">
+        Thesis:
+    </h>
+    <p style="color:gray;font-size:14px">
+        Grade 110/110 cum laude <br>
+        Development and Implementation of an innovative tool with graphic interface for radiomics analysis
+    </p>
+    </blockquote>
+
+<span style="color:gray"> 
+    2016 - 2019
+</span>
+
+- **Bachelor's degree in Clinical Engineering at "La Sapienza" University of Rome.** 
+    <blockquote>
+    <h style="color:gray;font-weight:bold;font-size:14px">
+        Thesis:
+    </h>
+    <p style="color:gray;font-size:14px">
+        Grade 108/110
+    </p>
+    </blockquote>    
+
+
+---
 
 
 
