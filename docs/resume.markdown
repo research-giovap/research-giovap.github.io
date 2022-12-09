@@ -4,8 +4,23 @@ title: Resume
 permalink: /resume/
 ---
 
+<head>
+<link rel="stylesheet" href="/styles/button.css">
+</head>
+<img align="left" src="/assets/img/me.png" width="130" height="130"> 
 
-<img src="/assets/img/me.png" width="130" height="130">
+
+<h1 align="right" style="color:black;font-weight:bold;font-size:24px">
+   Giovanni Pasini     
+</h1>
+<p align="right" style="color:black;font-size:16px">
+    Born in Rome on the 25th of July 1997.<br>
+    
+</p>
+<p align="right">
+    <button  class="button button"> Download Resume</button>
+</p>  
+
 
 
 ---  
