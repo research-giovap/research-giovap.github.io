@@ -1,11 +1,12 @@
 ---
 layout: page
-title: Resume
-permalink: /resume/
+title: Curriculum Vitae
+permalink: /cv/
 ---
 
 <head>
 <link rel="stylesheet" href="/styles/button.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <img align="left" src="/assets/img/me.png" width="130" height="130"> 
 
@@ -14,18 +15,19 @@ permalink: /resume/
    Giovanni Pasini     
 </h1>
 <p align="right" style="color:black;font-size:16px">
-    Born in Rome on the 25th of July 1997.<br>
+    Born in Rome on the 25th of July 1997<br>
+    <span style="font-size:12px">pasini.giovanni97@gmail.com</span><br>
+    <span style="font-size:12px">giovanni.pasini@uniroma1.it</span><br>
     
 </p>
-<p align="right">
-    <button  class="button button"> Download Resume</button>
-</p>  
-
-
 
 ---  
 
-## Experience   
+
+<button style="float: right;" class="button button" onclick="window.open('/assets/docs/new_cv.pdf','_blank')"><i class="fa fa-download"></i> Download .pdf</button>
+
+
+## Professional Experience   
 
 ---  
 <p style="color:gray"> 

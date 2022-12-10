@@ -1,13 +1,20 @@
 .button {
     background-color: #4CAF50; /* Green */
     border: none;
-    border-radius: 12px;
-    font-size: 20px;
+    border-radius: 4px;
+    font-size: 10px;
     font-weight: bold;
-    height: 40px;
+    height: 35px;
+    width: 110px;
     color: white;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    
+    
   }
+
+.button:hover {
+    background-color: #3f9342; /* Green */
+    transition-duration: 0.4s;
+}
