@@ -97,8 +97,76 @@ permalink: /cv/
     </p>
     </blockquote>    
 
+<span style="color:gray"> 
+    Jun 2016
+</span>
+
+- **High school degree.** 
+    <blockquote>
+    <h style="color:gray;font-weight:bold;font-size:14px">
+        Degree:
+    </h>
+    <p style="color:gray;font-size:14px">
+        Grade 94/100<br>
+        Liceo Classico E.Montale, Roma
+
+    </p>
+    </blockquote>    
 
 ---
+## Languages
+
+- **Italian**: native
+- **English**: 
+    <blockquote>
+    <h style="color:gray;font-weight:bold;font-size:14px">
+        Cambridge Certificate:
+    </h>
+    <p style="color:gray;font-size:14px">
+        C1 Advanced <br>
+        Score: 185<br>
+        Date: Apr 2016
+
+    </p>
+    </blockquote>    
+- **Spanish**: basic
+
+---
+
+## Skills
+
+
+1. **Programming Languages**  
+
+    | Language    | Level       | 
+    | ----------- | ----------- | 
+    | **MATLAB**  | advanced    | 
+    | **Python**  | intermediate| 
+    | **C**       | basic       | 
+    | **HTML**    | basic       | 
+    | **CSS**     | basic       | 
+
+2. **Packages and Software for Radiomics analysis**
+
+    | Name            | Level       | 
+    | -----------     | ----------- | 
+    | **Pyradiomics** | advanced    | 
+    | **3D Slicer**   | advanced    | 
+    | **LIFEx**       | intermediate| 
+    
+3. **Other Packages and Software**
+
+    |Name                  | Level  |
+    |----------------------|--------|
+    |**Office**            |advanced|
+    |**Photoshop**         |advanced|
+    |**Vrep/Coppelia Sim** |basic   |
+
+---
+
+
+
+
 
 
 
