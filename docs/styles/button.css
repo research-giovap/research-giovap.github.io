@@ -1,5 +1,5 @@
 .button {
-    background-color: #4CAF50; /* Green */
+    background-color: #6dbaae; /* Green */
     border: none;
     border-radius: 4px;
     font-size: 10px;
@@ -10,11 +10,12 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    box-shadow: 0 4px 14px 0 rgba(0,0,0,0.2), 0 2px 10px 0 rgba(0,0,0,0.19);
     
     
   }
 
 .button:hover {
-    background-color: #3f9342; /* Green */
+    background-color: #487c74; /* Green */
     transition-duration: 0.4s;
 }

@@ -58,7 +58,7 @@ permalink: /cv/
     Nov 2022 - present
 </span>
 
-- **PhD student in Industrial and Management Engineering at "La Sapienza" University of Rome.** 
+- **PhD student in Industrial and Management Engineering at "La Sapienza" University of Rome in collaboration with IBFM-CNR.** 
     <blockquote>
     <h style="color:gray;font-weight:bold;font-size:14px">
         Theme:
