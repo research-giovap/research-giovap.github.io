@@ -24,7 +24,7 @@ permalink: /cv/
 ---  
 
 
-<button style="float: right;" class="button button" onclick="window.open('/assets/docs/new_cv.pdf','_blank')"><i class="fa fa-download"></i> Download .pdf</button>
+<button style="float: right;" class="button button" onclick="window.open('/assets/docs/cv.pdf','_blank')"><i class="fa fa-download"></i> Download .pdf</button>
 
 
 ## Professional Experience   
