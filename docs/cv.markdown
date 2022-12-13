@@ -79,7 +79,7 @@ permalink: /cv/
     </h>
     <p style="color:gray;font-size:14px">
         Grade 110/110 cum laude <br>
-        Development and Implementation of an innovative tool with graphic interface for radiomics analysis
+        Development and Implementation of an innovative tool with graphical interface for radiomics analysis
     </p>
     </blockquote>
 
