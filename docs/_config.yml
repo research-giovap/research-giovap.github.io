@@ -37,6 +37,8 @@ url: https://research-giovap.github.io # the base hostname & protocol for your s
 # Build settings
 # theme: jekyll-theme-hydejack
 remote_theme: hydecorp/hydejack@v9.1.6
+accent_image: /assets/img/cover_web.jpg
+accent_color: rgb(14,102,255)
 plugins:
   - jekyll-feed
   - jekyll-include-cache

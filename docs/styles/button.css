@@ -1,5 +1,5 @@
 .button {
-    background-color: #6dbaae; /* Green */
+    background-color: rgb(91, 151, 254); /* Green */
     border: none;
     border-radius: 4px;
     font-size: 10px;
@@ -16,6 +16,6 @@
   }
 
 .button:hover {
-    background-color: #487c74; /* Green */
+    background-color: rgb(14,102,255); /* Green */
     transition-duration: 0.4s;
 }
