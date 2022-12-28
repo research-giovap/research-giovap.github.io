@@ -9,6 +9,9 @@ description: >
 
 author: gio
 ---
+
+<blockquote class="twitter-tweet" data-lang="en" data-theme="dark" data-align="center"><p lang="en" dir="ltr">1) matRadiomics is a freeware that allows the user to carry out the whole radiomics workflow.<br>It was presented for the first time in a research paper published in the Journal of Imaging. <a href="https://twitter.com/MDPIOpenAccess?ref_src=twsrc%5Etfw">@MDPIOpenAccess</a><br><br>Paper available in the comments below.<a href="https://twitter.com/hashtag/radiomics?src=hash&amp;ref_src=twsrc%5Etfw">#radiomics</a> <a href="https://t.co/ZlMFm7GlN8">https://t.co/ZlMFm7GlN8</a></p>&mdash; Giovanni Pasini (@research_giovap) <a href="https://twitter.com/research_giovap/status/1595725148526624768?ref_src=twsrc%5Etfw">November 24, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 # Introduction
 
 Currently, the most popular radiomics software, like [Slicer3D](https://www.slicer.org/) and [LIFEx](https://www.lifexsoft.org/), stops at the feature extraction level, not allowing to perform feature selection and predictive model bulding within the same software. Therefore, the user either needs to switch to another software or needs to know how to code, in order to continue with the radiomics workflow.  
@@ -22,6 +25,7 @@ On the other end, **[matRadiomics](https://doi.org/10.3390/jimaging8080221)**, a
 
 #### Attention
 matRadiomics is currently a research product, and it is still under development.
+
 
 # Installation and Functionalities
 
