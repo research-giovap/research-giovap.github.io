@@ -9,6 +9,9 @@ description: >
 
 author: gio
 ---
+<head>
+<link rel="stylesheet" href="/styles/iframe.css">
+</head>
 
 <blockquote class="twitter-tweet" data-lang="en" data-theme="dark" data-align="center"><p lang="en" dir="ltr">1) matRadiomics is a freeware that allows the user to carry out the whole radiomics workflow.<br>It was presented for the first time in a research paper published in the Journal of Imaging. <a href="https://twitter.com/MDPIOpenAccess?ref_src=twsrc%5Etfw">@MDPIOpenAccess</a><br><br>Paper available in the comments below.<a href="https://twitter.com/hashtag/radiomics?src=hash&amp;ref_src=twsrc%5Etfw">#radiomics</a> <a href="https://t.co/ZlMFm7GlN8">https://t.co/ZlMFm7GlN8</a></p>&mdash; Giovanni Pasini (@research_giovap) <a href="https://twitter.com/research_giovap/status/1595725148526624768?ref_src=twsrc%5Etfw">November 24, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -33,25 +36,31 @@ The installation procedure and the main functionalities of matRadiomics are expl
 
 - **Installation**  
 This video tutorial focuses on the installation procedure of matRadiomics. Currently, it works only on Windows 10/11.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6xhUk8ClxBw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="iframe-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/6xhUk8ClxBw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 - **Import DICOM, Segment and Extract Features**
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ONGb02CfkxA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+<div class="iframe-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/ONGb02CfkxA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+</div>
 
 - **Access DICOM attributes, Import Segmentations, Feature Selection**  
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/UgvnREn4ytI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+<div class="iframe-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/UgvnREn4ytI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+</div>
 
 - **Build and Save a Machine Learning Model**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kCODnuTwyGA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
-
+<div class="iframe-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/kCODnuTwyGA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+</div>
 - **Feature harmonization, Manual Segmentation, Switch between segmentations**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wNCKSkKWGmU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<div class="iframe-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/wNCKSkKWGmU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 
 
