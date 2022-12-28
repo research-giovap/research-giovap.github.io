@@ -261,6 +261,7 @@ DEPENDENCIES
   http_parser.rb (~> 0.6.0)
   jekyll-feed (~> 0.12)
   jekyll-include-cache
+  jekyll-paginate
   jekyll-theme-hydejack
   listen (~> 3.7.1)
   minima (~> 2.5)

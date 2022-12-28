@@ -42,34 +42,60 @@ accent_color: rgb(14,102,255)
 plugins:
   - jekyll-feed
   - jekyll-include-cache
-  -
+  - jekyll-paginate
+  - jekyll-archives
+
+paginate:      10
+paginate_path: '/page:num/'
+permalink: /blog/:categories/:year-:month-:day-:title/
 menu:
+  - title: Blog
+    url: /blog/
   - title: Publications
     url:   /publications/
   - title: CV
     url:   /cv/
   
 
-gio:
-  name:  Giovanni Pasini
-  email: giovanni.pasini@uniroma1.it
-  about:             |
-    Giovanni is a PhD student in Industrial and Management engineering
-    at "La Sapienza" University of Rome and a research collaborator
-    at the Institute of Molecular Bioimaging and Physiology (IBFM-CNR).
-    His research activity focuses on: radiomics, image processing, machine learning.
   
-  picture: 
-    path: assets\img\me.jpg
-  social: 
-    twitter: research_giovap
-    linkedin: giovanni-pasini-31188b152
-    email: giovanni.pasini@uniroma1.it
+authors:
+  gio:
+    about:             |
+      Giovanni is a PhD student in Industrial and Management engineering
+      at "La Sapienza" University of Rome and a research collaborator
+      at the Institute of Molecular Bioimaging and Physiology (IBFM-CNR).
+      His research activity focuses on: radiomics, image processing, machine learning.
+    social: 
+      twitter: research_giovap
+      linkedin: giovanni-pasini-31188b152
+      email: giovanni.pasini@uniroma1.it
 
 copyright:             © Giovanni Pasini 2022. All rights reserved.
-    
-    
-    
+
+collections:
+  featured_categories:
+    permalink:         /blog/:name/
+    output:            true
+
+  featured_tags:
+    permalink:         /tag-:name/
+    output:            true    
+
+feed:
+  categories:
+    - radiomics
+    - matRadiomics
+
+jekyll_compose:
+  default_front_matter:
+    posts:
+        layout: post
+        description: > 
+          A short ~160 character description of your post for search engines,
+          social media previews, etc.
+        image:
+          path: /assets/img/me.png  
+
     
 
 #########################################################

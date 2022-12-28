@@ -11,8 +11,7 @@ gio:
     His research activity focuses on: radiomics, image processing, machine learning.
     
   # This photo will be used in the about section
-  picture:
-    path:            assets/img/me.jpg
+  picture: /assets/img/me.png
   social:
     twitter:         research_giovap
     linkedin:        giovanni-pasini-31188b152
