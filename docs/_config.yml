@@ -33,7 +33,7 @@ url: https://pasinigiovanni.com # the base hostname & protocol for your site, e.
 # twitter_username: research_giovap
 # github_username:  research-giovap
 # linkedin_username: giovap
-
+favicon: /assets/img/logo_web_4.jpg
 ################# Hydejack ##########################
 # Build settings
 # theme: jekyll-theme-hydejack
