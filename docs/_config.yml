@@ -27,13 +27,13 @@ description: >- # this means to ignore newlines until "baseurl:"
   His research activity focuses on: radiomics, image processing, machine learning.
 
 keywords: [researcher, phd, radiomics, machine learning, medical imaging]
-
+favicon: /assets/icons/favicon.ico
 baseurl:  # the subpath of your site, e.g. /blog
 url: https://pasinigiovanni.com # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: research_giovap
 # github_username:  research-giovap
 # linkedin_username: giovap
-favicon: /assets/img/logo_web_4.jpg
+
 ################# Hydejack ##########################
 # Build settings
 # theme: jekyll-theme-hydejack
