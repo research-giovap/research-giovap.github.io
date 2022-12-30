@@ -26,7 +26,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   at the Institute of Molecular Bioimaging and Physiology (IBFM-CNR).
   His research activity focuses on: radiomics, image processing, machine learning.
 
-keywords: [researcher, phd, radiomics, machine learning, medical imaging]
+keywords: [researcher, phd, radiomics, machine learning, medical imaging, matRadiomics]
 favicon: /assets/icons/favicon.ico
 baseurl:  # the subpath of your site, e.g. /blog
 url: https://pasinigiovanni.com # the base hostname & protocol for your site, e.g. http://example.com
