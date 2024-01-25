@@ -7,7 +7,7 @@ Here you can find a list of all my **publications** (journal papers, conference 
 The **most recent** publications are shown at the **top of the page**.  
 If you find them valuable, don't hesitate to **cite** them in your paper.
 
-## 2023
+## 2024
 - **[Prediction of High Pathological Grade in Prostate Cancer Patients Undergoing [18F]-PSMA PET/CT: A Preliminary Radiomics Study](https://doi.org/10.1007/978-3-031-51026-7_5)**
 
     **Stefano Alessandro**, Mantarro Cristina, Richiusa Selene, Pasini Giovanni, Sabini Maria Gabriella, Cosentino Sebastiano, Ippolito Massimo. In: Foresti, G.L., Fusiello, A., Hancock, E. (eds) Image Analysis and Processing - ICIAP 2023 Workshops. ICIAP 2023. Lecture Notes in Computer Science, vol 14366. Springer, Cham.
@@ -15,7 +15,8 @@ If you find them valuable, don't hesitate to **cite** them in your paper.
 - **[Assessing the Robustness and Reproducibility of CT Radiomics Features in Non-small-cell Lung Carcinoma](https://doi.org/10.1007/978-3-031-51026-7_4)**
 
     **Pasini Giovanni** In: Foresti, G.L., Fusiello, A., Hancock, E. (eds) Image Analysis and Processing - ICIAP 2023 Workshops. ICIAP 2023. Lecture Notes in Computer Science, vol 14366. Springer, Cham.
-
+    
+## 2023
 - **[A Critical Analysis of the Robustness of Radiomics to Variations in Segmentation Methods in 18F-PSMA-1007 PET Images of Patients Affected by Prostate Cancer](https://doi.org/10.3390/diagnostics13243640)**
 
     **Pasini Giovanni**, Russo Giorgio, Mantarro Cristina, Bini Fabino, Richiusa Selene, Morgante Lucrezia, Comelli Albert, Russo Giorgio Ivan, Sabini Maria Gabriella, Cosentino Sebastiano, Marinozzi Franco, Ippolito Massimo, Stefano Alessandro. *Diagnostics*. 2023; 13(24):3640.
