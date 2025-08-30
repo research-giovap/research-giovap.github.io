@@ -21,10 +21,10 @@
 title: Giovanni Pasini's Website
 email: giovanni.pasini@uniroma1.it
 description: >- # this means to ignore newlines until "baseurl:"
-  Giovanni is a PhD student in Industrial and Management engineering 
-  at "La Sapienza" University of Rome and a research collaborator
-  at the Institute of Molecular Bioimaging and Physiology (IBFM-CNR).
-  His research activity focuses on: radiomics, image processing, machine learning.
+  Giovanni is a PhD student in Industrial and Management engineering
+    at "La Sapienza" University of Rome and a research collaborator
+    at the Institute of Bioimaging and Complex Biological Systems (IBSBC-CNR).
+    His research activity focuses on: radiomics, image processing, machine learning
 
 keywords: [researcher, phd, radiomics, machine learning, medical imaging, matRadiomics]
 favicon: /assets/icons/favicon-gp.ico
