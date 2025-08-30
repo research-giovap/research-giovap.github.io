@@ -9,8 +9,8 @@ title: About me
 <img align="right" src="assets/img/me.png"
 width="130"
 height="130"/>
-I'm a **PhD student** in Industrial and Management Engineering at ["La Sapienza" University of Rome](https://phd.uniroma1.it/web/PASINI-GIOVANNI_nP1683248_EN.aspx) and **associate researcher** at the [Institute of Molecular Bioimaging and Physiology (IBFM-CNR)](https://www.ibfm.cnr.it/?lang=en). My research interests span medical imaging, radiomics, machine learning and deep learning.  
+I'm a **PhD student** in Industrial and Management Engineering at ["La Sapienza" University of Rome](https://phd.uniroma1.it/web/PASINI-GIOVANNI_nP1683248_EN.aspx) and **associate researcher** at the [Institute of Bioimaging and Complex Biological Systems (IBSBC-CNR)](https://www.ibsbc.cnr.it/). My research interests span medical imaging, radiomics, machine learning and deep learning.  
 I'm interested in building robust and optimzed **radiomics workflows** able to solve several clinical classification tasks and in building **automated radiomics pipelines**, mostly through the use of Convolutional Neural Networks (CNN).  
 
 Currently, my PhD focuses on **Personalized medicine for the diagnosis and prognosis of oncological and neurodegenerative diseases: Radiomics and Artificial Intelligence to support clinical decision-making** and I've been working on the development of the new radiomics freeware named **[matRadiomics](https://doi.org/10.3390/jimaging8080221)** .  
-During my activity as a research collaborator at the IBFM, I mentored 2 master degree students and participated in the 1st International Workshop on Artificial Intelligence and Radiomics in Computer-Aided Diagnosis (AIRCAD).
+During my activity as a research collaborator at the IBSBC, I mentored 2 master degree students and participated in the 1st International Workshop on Artificial Intelligence and Radiomics in Computer-Aided Diagnosis (AIRCAD).
