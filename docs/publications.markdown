@@ -7,7 +7,32 @@ Here you can find a list of all my **publications** (journal papers, conference 
 The **most recent** publications are shown at the **top of the page**.  
 If you find them valuable, don't hesitate to **cite** them in your paper.
 
+## 2025
+- **[Comparative Evaluation of Machine Learning-Based Radiomics and Deep Learning for Breast Lesion Classification in Mammography](https://doi.org/10.3390/diagnostics15080953)**
+
+    Stefano Alessandro, Bini Fabiano, Giovagnoli Eleonora, Dimarco Mariangela, Lauciello Nicolò, Narbonese Daniela, **Pasini Giovanni**,  Marinozzi Franco, Russo Giorgio, D’Angelo Ildebrando. Comparative Evaluation of Machine Learning-Based Radiomics and Deep Learning for Breast Lesion Classification in Mammography. Diagnostics 2025, 15, 953.
+
+- **[[18F]PSMA-1007 PET/CT-based radiomics may help enhance the interpretation of bone focal uptakes in hormone-sensitive prostate cancer patients](https://doi.org/10.1007/s00259-025-07085-6)**
+
+    Bauckneht Matteo, **Pasini Giovanni**, Di Raimondo Tania, Russo Giorgio, Raffa Stefano, Donegani Maria Isabella, Dubois Daniela, Peñuela Leonardo, Sofia Luca, Celesti Greta, Bini Fabiano, Marinozzi Franco, Lanfranchi Francesco, Laudicella Riccardo, Sambuceti Gianmario, Stefano Alessandro. [18F]PSMA-1007 PET/CT-based radiomics may help enhance the interpretation of bone focal uptakes in hormone-sensitive prostate cancer patients. Eur J Nucl Med Mol Imaging 52, 2076–2086 (2025). 
+
 ## 2024
+- **[Implementation of Automatic Segmentation Framework as Preprocessing Step for Radiomics Analysis of Lung Anatomical Districts](https://doi.org/10.3390/biomedinformatics4040125)**
+
+    Stefano Alessandro, Bini Fabiano, Lauciello Nicolò, **Pasini Giovanni**,  Marinozzi Franco, Russo Giorgio. Implementation of Automatic Segmentation Framework as Preprocessing Step for Radiomics Analysis of Lung Anatomical Districts. BioMedInformatics 2024, 4, 2309-2320. 
+
+- **[Preclinical Implementation of matRadiomics: A Case Study for Early Malformation Prediction in Zebrafish Model](https://doi.org/10.3390/jimaging10110290)**
+
+    Bini Fabiano, Missori  Elisa, Pucci Gaia, **Pasini Giovanni**, Marinozzi Franco, Forte Giusi Irma, Russo Giorgio, Stefano Alessandro. Preclinical Implementation of matRadiomics: A Case Study for Early Malformation Prediction in Zebrafish Model. J. Imaging 2024, 10, 290.
+
+- **[A Robust [18F]-PSMA-1007 Radiomics Ensemble Model for Prostate Cancer Risk Stratification]( https://doi.org/10.1007/s10278-024-01281-w)**
+
+    **Pasini Giovanni**, Stefano Alessandro, Mantarro Cristina, Richiusa Selene, Comelli Albert, Russo Giorgio Ivan, Sabini Maria Gabriella, Cosentino Sebastiano, Ippolito Massimo, Russo Giorgio. A Robust [18F]-PSMA-1007 Radiomics Ensemble Model for Prostate Cancer Risk Stratification. J Digit Imaging. Inform. med. 38, 1388–1402 (2025). 
+
+- **[Development and Implementation of an Innovative Framework for Automated Radiomics Analysis in Neuroimaging](https://doi.org/10.3390/jimaging10040096)**
+
+    Camastra Chiara, **Pasini Giovanni**, Stefano Alessandro, Russo Giorgio, Vescio Basilio, Bini Fabiano, Marinozzi Franco, Augimeri Antonio.  Development and Implementation of an Innovative Framework for Automated Radiomics Analysis in Neuroimaging. J. Imaging 2024, 10, 96. 
+
 - **[Prediction of High Pathological Grade in Prostate Cancer Patients Undergoing [18F]-PSMA PET/CT: A Preliminary Radiomics Study](https://doi.org/10.1007/978-3-031-51026-7_5)**
 
     Stefano Alessandro, Mantarro Cristina, Richiusa Selene, **Pasini Giovanni**, Sabini Maria Gabriella, Cosentino Sebastiano, Ippolito Massimo. In: Foresti, G.L., Fusiello, A., Hancock, E. (eds) Image Analysis and Processing - ICIAP 2023 Workshops. ICIAP 2023. Lecture Notes in Computer Science, vol 14366. Springer, Cham.
