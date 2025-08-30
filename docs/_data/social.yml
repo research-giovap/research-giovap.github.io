@@ -206,3 +206,7 @@ keybase:
 download:
   name: Download
   icon: icon-box-add
+researchgate:
+  name: ResearchGate
+  icon: fab fa-researchgate
+  url: "https://www.researchgate.net/profile/%{user}"
