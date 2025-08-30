@@ -141,7 +141,8 @@ permalink: /cv/
     | Language    | Level       | 
     | ----------- | ----------- | 
     | **MATLAB**  | advanced    | 
-    | **Python**  | intermediate| 
+    | **Python**  | advanced    | 
+    | **C#**      | intermediate|
     | **C**       | basic       | 
     | **HTML**    | basic       | 
     | **CSS**     | basic       | 
