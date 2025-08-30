@@ -208,5 +208,5 @@ download:
   icon: icon-box-add
 researchgate:
   name: ResearchGate
-  icon: /assets/icons/researchgate.svg
+  icon: /assets/icons/researchgate.png
   url: "https://www.researchgate.net/profile/%{user}"
