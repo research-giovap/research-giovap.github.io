@@ -30,10 +30,12 @@
 }
 
 /* --- Global Reset & Typography --- */
-html, body {
-    /* Explicitly coloring HTML kills the white band at the bottom of mobile browsers */
-    background-color: var(--bg-main); 
-    overscroll-behavior-y: none; /* Stops the mobile bounce/white band */
+html {
+    /* Moving the gradient to the absolute root kills the white band in ALL themes */
+    background: var(--bg-gradient); 
+    background-attachment: fixed;
+    overscroll-behavior-y: none; /* Stops the mobile bounce */
+    min-height: 100dvh;
 }
 
 * {
@@ -45,13 +47,12 @@ html, body {
 }
 
 body {
-    background: var(--bg-gradient);
-    background-attachment: fixed;
+    background: transparent; /* Lets the HTML background bleed through cleanly */
     color: var(--text-main);
     line-height: 1.7;
     display: flex;
     flex-direction: column;
-    min-height: 100dvh; /* Dynamic viewport height fixes mobile URL bar jumps */
+    min-height: 100dvh; 
     overflow-x: hidden;
 }
 
@@ -100,7 +101,6 @@ nav {
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border-color);
     z-index: 10000;
-    /* Added transition for the scroll hide/show effect */
     transition: transform 0.3s cubic-bezier(0.3, 0, 0.2, 1), background-color 0.4s ease; 
 }
 

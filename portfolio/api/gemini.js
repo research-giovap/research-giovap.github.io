@@ -14,7 +14,11 @@ export default async function handler(req, res) {
 
     const payload = {
         contents: [{ parts: [{ text: prompt }] }],
-        systemInstruction: { parts: [{ text: systemInstruction }] }
+        systemInstruction: { parts: [{ text: systemInstruction }] },
+        // --- ADDED THIS BLOCK FOR DETERMINISM ---
+        generationConfig: {
+            temperature: 0.1 // Forces the AI to be highly factual and consistent instead of creative
+        }
     };
 
     if (useSearch) {
