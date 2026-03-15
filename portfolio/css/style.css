@@ -312,9 +312,35 @@ footer { text-align: center; padding: 2rem; border-top: 1px solid var(--border-c
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
-    .nav-container { padding: 1rem; }
-    .nav-links { display: none; }
-    .controls { padding-left: 1rem; margin-left: 0.5rem; }
+    .nav-container { 
+        padding: 1rem; 
+        flex-wrap: wrap; 
+    }
+    /* Targets the div holding the links and controls */
+    .nav-container > div {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+    .nav-links { 
+        display: flex; /* Brings the menu back! */
+        width: 100%;
+        justify-content: center;
+        gap: 1.5rem; 
+        order: 2; /* Forces the links to sit below the buttons */
+        margin-top: 1rem;
+        font-size: 0.95rem;
+    }
+    .controls { 
+        border-left: none; 
+        padding-left: 0; 
+        margin-left: 0; 
+        order: 1;
+    }
+    main { 
+        margin-top: 160px; /* Adds extra breathing room for the taller mobile header */
+    }
     h1 { font-size: 2.5rem; }
     .chat-window { width: 90vw; height: 60vh; right: -10px; bottom: 80px; }
 }
