@@ -15,9 +15,9 @@ export default async function handler(req, res) {
     const payload = {
         contents: [{ parts: [{ text: prompt }] }],
         systemInstruction: { parts: [{ text: systemInstruction }] },
-        // --- ADDED THIS BLOCK FOR DETERMINISM ---
+        // Updated for Gemini 3 Flash requirements
         generationConfig: {
-            temperature: 0.1 // Forces the AI to be highly factual and consistent instead of creative
+            temperature: 1.0 // Recommended default for Gemini 3 models to prevent looping/degradation
         }
     };
 
@@ -26,13 +26,20 @@ export default async function handler(req, res) {
     }
 
     try {
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`, {
+        // Updated endpoint to use the gemini-3-flash-preview model
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
         });
 
         const data = await response.json();
+        
+        // Safety check to catch specific API errors from Google (e.g., rate limits, tool restrictions)
+        if (!response.ok) {
+            throw new Error(data.error?.message || "Unknown API error returned from Google");
+        }
+
         const text = data.candidates?.[0]?.content?.parts?.[0]?.text || "No response generated.";
         
         return res.status(200).json({ text: text });
