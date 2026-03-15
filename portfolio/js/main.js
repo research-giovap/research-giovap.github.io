@@ -84,3 +84,22 @@ function triggerReveal() {
         });
     }, 50);
 }
+
+// --- Chat Widget Scroll Logic ---
+window.addEventListener('scroll', () => {
+    const chatWidget = document.querySelector('.chat-widget');
+    const chatWindow = document.getElementById('chat-window');
+    
+    if (!chatWidget || !chatWindow) return;
+
+    if (chatWindow.classList.contains('open')) {
+        chatWidget.classList.add('visible');
+        return;
+    }
+
+    if (window.scrollY > 200) {
+        chatWidget.classList.add('visible');
+    } else {
+        chatWidget.classList.remove('visible');
+    }
+});

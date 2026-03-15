@@ -25,7 +25,7 @@ function formatAIResponse(text) {
     return text
         // Removes citation tags like
         .replace(/\]*\]/gi, '')
-        // Removes standard numerical citations like [1] or [1, 2] if they pop up
+        // Removes standard numerical citations like [1] or [1, 2]
         .replace(/\[\d+(?:,\s*\d+)*\]/g, '')
         // Matches **bold text** even if it spans multiple lines
         .replace(/\*\*([\s\S]*?)\*\*/g, '<strong>$1</strong>')
@@ -49,14 +49,16 @@ async function simplifyText(titleId, descId, resultId) {
     resultDiv.style.display = 'block';
     resultDiv.innerHTML = currentLang === 'en' ? '<em>Searching the DOI link to generate a scientific summary...</em>' : '<em>Ricerca del link DOI per generare un riassunto scientifico...</em>';
 
-    const systemPrompt = `You are an expert scientific researcher and communicator. Your task is to provide a scientifically accurate summary of the academic paper provided.
+    // Upgraded prompt with strict Anti-Hallucination rules for Paywalls
+    const systemPrompt = `You are an expert scientific researcher and communicator. Your task is to provide a scientifically accurate summary of the academic paper provided via its DOI.
     IMPORTANT INSTRUCTIONS:
-    1. Use the Google Search tool to look up the provided DOI link and read the paper's official abstract or content.
-    2. Summarize the actual scientific findings, methodology, and conclusions based on the abstract you find online.
-    3. Keep the summary concise (3-4 sentences) but preserve the correct scientific terminology and context. Do NOT make up a generic summary based only on the title.
-    4. You MUST reply entirely in ${currentLang === 'en' ? 'English' : 'Italian'}.`;
+    1. USE THE GOOGLE SEARCH TOOL to look up the provided DOI link.
+    2. Attempt to read the full text (Abstract, Materials & Methods, Results, Discussion). If it is openly accessible, summarize the full study.
+    3. ANTI-HALLUCINATION RULE: If the paper is behind a paywall or you can ONLY access the abstract, you MUST base your summary strictly on the abstract alone. DO NOT guess, infer, or invent methodologies, results, numbers, or conclusions that are not explicitly written in the text you successfully retrieved. 
+    4. Keep the summary concise (3-4 sentences) and maintain professional scientific terminology. Do NOT make up a generic summary based only on the title.
+    5. You MUST reply entirely in ${currentLang === 'en' ? 'English' : 'Italian'}.`;
     
-    const userPrompt = `Title: ${title}\nPaper Link/DOI: ${doiLink}\nPlease search this DOI link and summarize the paper's scientific abstract.`;
+    const userPrompt = `Title: ${title}\nPaper Link/DOI: ${doiLink}\nPlease search this DOI and summarize the available text (abstract or full text). Strictly avoid hallucinating details you cannot read.`;
 
     try {
         const explanation = await callBackend(userPrompt, systemPrompt, true);
@@ -97,6 +99,7 @@ async function sendMessage() {
     chatMessages.appendChild(typingIndicator);
     chatMessages.scrollTop = chatMessages.scrollHeight;
 
+    // Upgraded Assistant Context
     const assistantContext = `
         You are the official AI Research Assistant on the personal website of Giovanni Pasini.
         Base your knowledge on the hardcoded facts below, and actively USE THE GOOGLE SEARCH TOOL to find accurate, up-to-date information when asked for details outside of this prompt.
