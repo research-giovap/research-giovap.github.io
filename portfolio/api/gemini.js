@@ -1,3 +1,5 @@
+import { GoogleGenAI } from "@google/genai";
+
 export default async function handler(req, res) {
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method not allowed' });
@@ -12,38 +14,34 @@ export default async function handler(req, res) {
         return res.status(500).json({ error: 'Server misconfiguration: API Key missing' });
     }
 
-    const payload = {
-        contents: [{ parts: [{ text: prompt }] }],
-        systemInstruction: { parts: [{ text: systemInstruction }] },
-        // Updated for Gemini 3 Flash requirements
-        generationConfig: {
-            temperature: 1.0 // Recommended default for Gemini 3 models to prevent looping/degradation
-        }
+    // Initialize the new Google Gen AI SDK
+    const ai = new GoogleGenAI({ apiKey: apiKey });
+
+    // Setup the configuration object for the Gemini 3 family
+    const config = {
+        systemInstruction: systemInstruction,
+        temperature: 1.0 // Recommended for Gemini 3 stability
     };
 
+    // Attach Google Search grounding if requested
+    // Note: The new SDK uses 'googleSearch' instead of 'google_search'
     if (useSearch) {
-        payload.tools = [{ "google_search": {} }];
+        config.tools = [{ googleSearch: {} }];
     }
 
     try {
-        // Updated endpoint to use the gemini-3-flash-preview model
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
+        const response = await ai.models.generateContent({
+            model: "gemini-3.1-flash-lite-preview", 
+            contents: prompt,
+            config: config
         });
 
-        const data = await response.json();
-        
-        // Safety check to catch specific API errors from Google (e.g., rate limits, tool restrictions)
-        if (!response.ok) {
-            throw new Error(data.error?.message || "Unknown API error returned from Google");
-        }
-
-        const text = data.candidates?.[0]?.content?.parts?.[0]?.text || "No response generated.";
+        // The new SDK automatically parses the response text for us
+        const text = response.text || "No response generated.";
         
         return res.status(200).json({ text: text });
     } catch (error) {
+        console.error("Gemini API Error:", error);
         return res.status(500).json({ error: error.message });
     }
 }
