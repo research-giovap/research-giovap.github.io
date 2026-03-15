@@ -85,21 +85,34 @@ function triggerReveal() {
     }, 50);
 }
 
-// --- Chat Widget Scroll Logic ---
+// --- Smart Navbar & Chat Widget Scroll Logic ---
+let lastScrollTop = 0;
+
 window.addEventListener('scroll', () => {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // 1. Navbar Logic (Hide on scroll down, show on scroll up)
+    const nav = document.querySelector('nav');
+    if (nav) {
+        if (currentScroll > lastScrollTop && currentScroll > 100) {
+            nav.style.transform = "translateY(-100%)";
+        } else {
+            nav.style.transform = "translateY(0)";
+        }
+    }
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+
+    // 2. Chat Widget Logic
     const chatWidget = document.querySelector('.chat-widget');
     const chatWindow = document.getElementById('chat-window');
     
-    if (!chatWidget || !chatWindow) return;
-
-    if (chatWindow.classList.contains('open')) {
-        chatWidget.classList.add('visible');
-        return;
-    }
-
-    if (window.scrollY > 200) {
-        chatWidget.classList.add('visible');
-    } else {
-        chatWidget.classList.remove('visible');
+    if (chatWidget && chatWindow) {
+        if (chatWindow.classList.contains('open')) {
+            chatWidget.classList.add('visible');
+        } else if (currentScroll > 200) {
+            chatWidget.classList.add('visible');
+        } else {
+            chatWidget.classList.remove('visible');
+        }
     }
 });

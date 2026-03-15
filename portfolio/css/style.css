@@ -31,6 +31,8 @@
 
 /* --- Global Reset & Typography --- */
 html, body {
+    /* Explicitly coloring HTML kills the white band at the bottom of mobile browsers */
+    background-color: var(--bg-main); 
     overscroll-behavior-y: none; /* Stops the mobile bounce/white band */
 }
 
@@ -98,6 +100,8 @@ nav {
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border-color);
     z-index: 10000;
+    /* Added transition for the scroll hide/show effect */
+    transition: transform 0.3s cubic-bezier(0.3, 0, 0.2, 1), background-color 0.4s ease; 
 }
 
 .nav-container {
