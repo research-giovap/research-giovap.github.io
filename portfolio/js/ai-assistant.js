@@ -49,17 +49,17 @@ async function simplifyText(titleId, descId, resultId) {
     resultDiv.style.display = 'block';
     resultDiv.innerHTML = currentLang === 'en' ? '<em>Searching the DOI link to generate a scientific summary...</em>' : '<em>Ricerca del link DOI per generare un riassunto scientifico...</em>';
 
-    // Upgraded prompt with STRICT Identity Rules to block "DeepMica" and other cross-contaminations
-    const systemPrompt = `You are an expert scientific researcher and communicator. Your task is to provide a scientifically accurate summary of the academic paper provided via its DOI.
+    // Upgraded prompt: Removed the "pink elephant" and added a strict failure condition.
+    const systemPrompt = `You are an expert scientific researcher and communicator. Your task is to provide a scientifically accurate summary of the academic paper provided.
     IMPORTANT INSTRUCTIONS:
     1. USE THE GOOGLE SEARCH TOOL to look up the provided DOI link and the exact Title.
-    2. Attempt to read the full text. If it is openly accessible, summarize the full study.
-    3. ANTI-HALLUCINATION RULE: If the paper is behind a paywall or you can ONLY access the abstract, you MUST base your summary strictly on the abstract alone. DO NOT guess, infer, or invent methodologies or results. 
-    4. STRICT IDENTITY RULE: You must summarize ONLY the specific paper matching the exact Title provided. DO NOT confuse it with other tools, software, or papers by the same authors (e.g., absolutely DO NOT mention 'DeepMica' unless it is explicitly the focus of this specific paper).
-    5. Keep the summary concise (3-4 sentences) and maintain professional scientific terminology. Do NOT make up a generic summary.
+    2. Attempt to read the full text or abstract from the search results.
+    3. STRICT ANTI-HALLUCINATION RULE: Your summary MUST be based strictly on the text found in your search. Do NOT guess, infer, or invent methodologies, acronyms, or results.
+    4. MANDATORY ESCAPE HATCH: If your search does not return the actual abstract or full text for this EXACT paper, you MUST stop and reply exactly with: "${currentLang === 'en' ? 'I could not find the abstract for this specific paper online to provide a reliable summary.' : 'Non sono riuscito a trovare il riassunto di questo documento online per fornire una sintesi affidabile.'}"
+    5. Keep the summary concise (3-4 sentences) and maintain professional scientific terminology.
     6. You MUST reply entirely in ${currentLang === 'en' ? 'English' : 'Italian'}.`;
     
-    const userPrompt = `Title: "${title}"\nPaper Link/DOI: ${doiLink}\nPlease search this DOI and EXACT title. Summarize ONLY this specific paper. Strictly avoid hallucinating details or conflating it with other projects.`;
+    const userPrompt = `Title: "${title}"\nPaper Link/DOI: ${doiLink}\nPlease search this DOI and EXACT title. Summarize ONLY this specific paper using the strict rules provided.`;
 
     try {
         const explanation = await callBackend(userPrompt, systemPrompt, true);
