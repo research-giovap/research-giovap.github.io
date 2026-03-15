@@ -20,9 +20,13 @@ async function callBackend(prompt, systemInstruction, useSearch = false) {
     return data.text;
 }
 
-// Helper function to robustly format Gemini's Markdown output
+// Helper function to robustly format Gemini's output
 function formatAIResponse(text) {
     return text
+        // Removes citation tags like
+        .replace(/\]*\]/gi, '')
+        // Removes standard numerical citations like [1] or [1, 2] if they pop up
+        .replace(/\[\d+(?:,\s*\d+)*\]/g, '')
         // Matches **bold text** even if it spans multiple lines
         .replace(/\*\*([\s\S]*?)\*\*/g, '<strong>$1</strong>')
         // Converts standard newlines into HTML line breaks
@@ -93,7 +97,6 @@ async function sendMessage() {
     chatMessages.appendChild(typingIndicator);
     chatMessages.scrollTop = chatMessages.scrollHeight;
 
-    // Upgraded Assistant Context with detailed DOI Collaboration rules
     const assistantContext = `
         You are the official AI Research Assistant on the personal website of Giovanni Pasini.
         Base your knowledge on the hardcoded facts below, and actively USE THE GOOGLE SEARCH TOOL to find accurate, up-to-date information when asked for details outside of this prompt.
