@@ -1,5 +1,4 @@
-// NOTE: Change this endpoint to your secure Vercel URL once deployed
-// e.g., const endpoint = `https://your-site.vercel.app/api/gemini`;
+// NOTE: Ensure this points exactly to `/api/gemini` for Vercel Serverless
 const endpoint = `/api/gemini`; 
 
 async function callBackend(prompt, systemInstruction, useSearch = false) {

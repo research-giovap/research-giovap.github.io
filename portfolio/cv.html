@@ -56,7 +56,73 @@
                         <span class="lang-it">Ricerca scientifica con focus su AI e radiomica applicata alle immagini mediche. Partecipazione al progetto Breast Integrated Solution (BIS).</span>
                     </p>
                 </div>
-                <!-- ... All other Timeline Items go here ... -->
+
+                <div class="timeline-item">
+                    <div class="timeline-date"><span class="lang-en">Jun 2025 - Present</span><span class="lang-it">Giu 2025 - Oggi</span></div>
+                    <h3>
+                        <span class="lang-en">Associate Collaborator</span>
+                        <span class="lang-it">Collaboratore Associato</span>
+                    </h3>
+                    <p><em><span class="lang-en">National Institute for Nuclear Physics (INFN-LNS), Catania</span><span class="lang-it">Istituto Nazionale di Fisica Nucleare (INFN-LNS), Catania</span></em></p>
+                    <p style="color: var(--text-muted); margin-top: 0.5rem; font-size: 0.95rem;">
+                        <span class="lang-en">Research support for the Artificial Intelligence in Medicine: focus on Multi-Input Analysis (AIM_MIA) project.</span>
+                        <span class="lang-it">Supporto alla ricerca per il progetto Artificial Intelligence in Medicine: focus on Multi-Input Analysis (AIM_MIA).</span>
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date"><span class="lang-en">Jan 2023 - Nov 2025</span><span class="lang-it">Gen 2023 - Nov 2025</span></div>
+                    <h3>
+                        <span class="lang-en">Associate Collaborator</span>
+                        <span class="lang-it">Collaboratore Associato</span>
+                    </h3>
+                    <p><em><span class="lang-en">Institute of Bioimaging and Complex Biological Systems (IBSBC-CNR)</span><span class="lang-it">Istituto di Bioimmagini e Sistemi Biologici Complessi (IBSBC-CNR)</span></em></p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date"><span class="lang-en">May 2022 - Jan 2023</span><span class="lang-it">Mag 2022 - Gen 2023</span></div>
+                    <h3>
+                        <span class="lang-en">Research Collaborator</span>
+                        <span class="lang-it">Incarico di Collaborazione Occasionale</span>
+                    </h3>
+                    <p><em><span class="lang-en">Institute of Bioimaging and Complex Biological Systems (IBSBC-CNR)</span><span class="lang-it">Istituto di Bioimmagini e Sistemi Biologici Complessi (IBSBC-CNR)</span></em></p>
+                    <p style="color: var(--text-muted); margin-top: 0.5rem; font-size: 0.95rem;">
+                        <span class="lang-en">Developed and implemented the first version of the matRadiomics framework.</span>
+                        <span class="lang-it">Sviluppo ed implementazione della prima versione dell'applicazione matRadiomics.</span>
+                    </p>
+                </div>
+            </div>
+
+            <h2 class="reveal"><span class="lang-en">Education</span><span class="lang-it">Istruzione</span></h2>
+            <div class="timeline reveal">
+                <div class="timeline-item">
+                    <div class="timeline-date"><span class="lang-en">Nov 2022 - Jan 2026</span><span class="lang-it">Nov 2022 - Gen 2026</span></div>
+                    <h3>
+                        <span class="lang-en">PhD in Industrial and Management Engineering</span>
+                        <span class="lang-it">Dottorato di Ricerca in Ingegneria Gestionale e Industriale</span>
+                    </h3>
+                    <p><em><span class="lang-en">Sapienza University of Rome & IBSBC-CNR</span><span class="lang-it">Sapienza Università di Roma & IBSBC-CNR</span></em></p>
+                    <p style="color: var(--text-muted); margin-top: 0.5rem; font-size: 0.95rem;">
+                        <span class="lang-en">Graduated on January 22, 2026. Thesis focused on personalized medicine, AI, and radiomics for clinical decision support in oncology and neurodegenerative diseases.</span>
+                        <span class="lang-it">Conseguito il 22 Gennaio 2026. Tesi focalizzata su medicina personalizzata, AI e radiomica come strumenti di supporto clinico in ambito oncologico e malattie neurodegenerative.</span>
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Sep 2019 - Jan 2022</div>
+                    <h3>
+                        <span class="lang-en">Master's Degree in Biomedical Engineering (110/110 e lode)</span>
+                        <span class="lang-it">Laurea Magistrale in Ingegneria Biomedica (110/110 e lode)</span>
+                    </h3>
+                    <p><em><span class="lang-en">Sapienza University of Rome</span><span class="lang-it">Sapienza Università di Roma</span></em></p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Sep 2016 - Oct 2019</div>
+                    <h3>
+                        <span class="lang-en">Bachelor's Degree in Clinical Engineering (108/110)</span>
+                        <span class="lang-it">Laurea Triennale in Ingegneria Clinica (108/110)</span>
+                    </h3>
+                    <p><em><span class="lang-en">Sapienza University of Rome</span><span class="lang-it">Sapienza Università di Roma</span></em></p>
+                </div>
             </div>
         </section>
     </main>
@@ -65,7 +131,30 @@
         <p>&copy; <span id="year"></span> Giovanni Pasini. <span class="lang-en">All rights reserved.</span><span class="lang-it">Tutti i diritti riservati.</span></p>
     </footer>
 
-    <!-- Gemini Chat Widget Goes Here (Paste from index.html) -->
+    <!-- Gemini Chat Widget -->
+    <div class="chat-widget">
+        <button class="chat-toggle" onclick="toggleChat()" aria-label="Open AI Assistant">✨</button>
+        <div class="chat-window" id="chat-window">
+            <div class="chat-header">
+                <span>✨ <span class="lang-en">AI Assistant</span><span class="lang-it">Assistente AI</span></span>
+                <button class="close-chat" onclick="toggleChat()">&times;</button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="msg ai">
+                    <span class="lang-en">Hi! I'm an AI assistant trained on Giovanni's CV and research. Ask me anything about his work!</span>
+                    <span class="lang-it">Ciao! Sono un assistente AI addestrato sul CV e sulla ricerca di Giovanni. Chiedimi qualsiasi cosa sul suo lavoro!</span>
+                </div>
+                <div id="typing-indicator" class="typing-indicator">✨ <span class="lang-en">AI is thinking...</span><span class="lang-it">L'AI sta scrivendo...</span></div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" class="lang-en" placeholder="Ask about matRadiomics or his PhD..." onkeypress="handleKeyPress(event)">
+                <input type="text" id="chat-input-it" class="lang-it" placeholder="Chiedi su matRadiomics o il Dottorato..." onkeypress="handleKeyPress(event)">
+                <button onclick="sendMessage()">
+                    <svg xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
     <script src="js/ai-assistant.js"></script>

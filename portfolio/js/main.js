@@ -2,20 +2,22 @@ let currentLang = 'en';
 
 // RUNS ON EVERY PAGE LOAD: Check localStorage for user preferences
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Restore Language
+    // Restore Language
     const savedLang = localStorage.getItem('site-lang') || 'en';
     document.body.classList.remove('en', 'it');
     document.body.classList.add(savedLang);
     currentLang = savedLang;
 
-    // 2. Restore Theme
+    // Restore Theme
     const savedTheme = localStorage.getItem('site-theme') || 'dark';
     document.documentElement.setAttribute('data-theme', savedTheme);
     document.getElementById('moon-icon').style.display = savedTheme === 'light' ? 'block' : 'none';
     document.getElementById('sun-icon').style.display = savedTheme === 'dark' ? 'block' : 'none';
 
-    // 3. Set Year & Trigger Animations
+    // Set Year
     document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Trigger Animations
     triggerReveal();
 });
 
@@ -29,7 +31,6 @@ function toggleLanguage() {
         body.classList.remove('it'); body.classList.add('en');
         currentLang = 'en';
     }
-    // Save to localStorage so it stays when user clicks another page
     localStorage.setItem('site-lang', currentLang);
 }
 
@@ -43,7 +44,6 @@ function toggleTheme() {
     document.getElementById('moon-icon').style.display = newTheme === 'light' ? 'block' : 'none';
     document.getElementById('sun-icon').style.display = newTheme === 'dark' ? 'block' : 'none';
     
-    // Save to localStorage
     localStorage.setItem('site-theme', newTheme);
 }
 
