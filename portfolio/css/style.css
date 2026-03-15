@@ -31,9 +31,8 @@
 
 /* --- Global Reset & Typography --- */
 html {
-    /* Fills the "bounce" area with the correct theme color (dark or light) */
     background-color: var(--bg-main); 
-    overscroll-behavior-y: none; 
+    overscroll-behavior-y: none;
 }
 
 * {
@@ -44,18 +43,26 @@ html {
     transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 }
 
+/* Bulletproof fixed gradient background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg-gradient);
+    z-index: -2; /* Keeps it safely behind your moving blobs (which are -1) */
+}
+
 body {
-    background-image: var(--bg-gradient);
-    background-color: var(--bg-main); /* Fallback */
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    
+    /* Background is now handled by the ::before pseudo-element */
+    background: transparent;
     color: var(--text-main);
     line-height: 1.7;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* vh is more stable than dvh for fixed backgrounds */
+    min-height: 100vh;
     overflow-x: hidden;
 }
 
