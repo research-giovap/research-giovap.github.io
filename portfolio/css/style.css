@@ -31,11 +31,9 @@
 
 /* --- Global Reset & Typography --- */
 html {
-    /* Moving the gradient to the absolute root kills the white band in ALL themes */
-    background: var(--bg-gradient); 
-    background-attachment: fixed;
-    overscroll-behavior-y: none; /* Stops the mobile bounce */
-    min-height: 100dvh;
+    /* Fills the "bounce" area with the correct theme color (dark or light) */
+    background-color: var(--bg-main); 
+    overscroll-behavior-y: none; 
 }
 
 * {
@@ -47,12 +45,17 @@ html {
 }
 
 body {
-    background: transparent; /* Lets the HTML background bleed through cleanly */
+    background-image: var(--bg-gradient);
+    background-color: var(--bg-main); /* Fallback */
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
     color: var(--text-main);
     line-height: 1.7;
     display: flex;
     flex-direction: column;
-    min-height: 100dvh; 
+    min-height: 100vh; /* vh is more stable than dvh for fixed backgrounds */
     overflow-x: hidden;
 }
 
