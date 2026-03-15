@@ -1,6 +1,6 @@
-import { GoogleGenAI } from "@google/genai";
+const { GoogleGenAI } = require("@google/genai");
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method not allowed' });
     }
@@ -17,14 +17,12 @@ export default async function handler(req, res) {
     // Initialize the new Google Gen AI SDK
     const ai = new GoogleGenAI({ apiKey: apiKey });
 
-    // Setup the configuration object for the Gemini 3 family
+    // Setup the configuration object
     const config = {
         systemInstruction: systemInstruction,
-        temperature: 1.0 // Recommended for Gemini 3 stability
+        temperature: 1.0 
     };
 
-    // Attach Google Search grounding if requested
-    // Note: The new SDK uses 'googleSearch' instead of 'google_search'
     if (useSearch) {
         config.tools = [{ googleSearch: {} }];
     }
@@ -36,7 +34,6 @@ export default async function handler(req, res) {
             config: config
         });
 
-        // The new SDK automatically parses the response text for us
         const text = response.text || "No response generated.";
         
         return res.status(200).json({ text: text });
@@ -44,4 +41,4 @@ export default async function handler(req, res) {
         console.error("Gemini API Error:", error);
         return res.status(500).json({ error: error.message });
     }
-}
+};
