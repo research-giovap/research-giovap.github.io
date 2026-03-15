@@ -49,20 +49,18 @@ async function simplifyText(titleId, descId, resultId) {
     resultDiv.style.display = 'block';
     resultDiv.innerHTML = currentLang === 'en' ? '<em>Searching the DOI link to generate a scientific summary...</em>' : '<em>Ricerca del link DOI per generare un riassunto scientifico...</em>';
 
-    // Hyper-strict prompt designed specifically for Flash-Lite's behavior
-    const systemPrompt = `You are a strict academic summarizer. 
-    1. Search the web using ONLY the provided DOI. Do not perform broad keyword searches.
-    2. Evaluate the search snippets. If the snippet does not contain the actual abstract or full text for the EXACT paper title provided, DO NOT try to piece together information. 
-    3. Do not confuse the paper with "Recommended Articles" or other chapters in the same book.
-    4. MANDATORY ESCAPE HATCH: If the exact abstract is missing, paywalled, or unclear, you MUST immediately stop and reply exactly with: "${currentLang === 'en' ? 'I could not find the abstract for this specific paper online to provide a reliable summary.' : 'Non sono riuscito a trovare il riassunto di questo documento online per fornire una sintesi affidabile.'}"
-    5. If you DO find the abstract, summarize it in 3-4 sentences using professional terminology. 
-    6. You MUST reply entirely in ${currentLang === 'en' ? 'English' : 'Italian'}.`;
+    // Balanced prompt: Strict on the title, but relaxed on author formatting
+    const systemPrompt = `You are a scientific AI assistant. Your job is to summarize the specific academic paper requested.
+    1. Use the Google Search tool to find the abstract or full text using the provided Title and DOI.
+    2. Read the search results carefully. If the search results describe the EXACT paper requested, provide a concise 3-4 sentence summary of its objective and findings using professional terminology.
+    3. ANTI-HALLUCINATION RULE: If the search results describe a different paper, a different software, or if the actual abstract is hidden behind a paywall and not visible in the snippets, you MUST NOT guess.
+    4. MANDATORY ESCAPE HATCH: If you cannot read the actual abstract of this exact paper in your search, you MUST reply exactly with: "${currentLang === 'en' ? 'I could not find the abstract for this specific paper online to provide a reliable summary.' : 'Non sono riuscito a trovare il riassunto di questo documento online per fornire una sintesi affidabile.'}"
+    5. You MUST reply entirely in ${currentLang === 'en' ? 'English' : 'Italian'}.`;
     
-    const userPrompt = `DOI to search: "${doiLink}"
-    Exact Title: "${title}"
-    Authors: Giovanni Pasini et al.
-    Instructions: Search the DOI. If the abstract for this exact title is not clearly visible in the search results, use the escape hatch phrase. Do not invent details.`;
+    const userPrompt = `Target Paper Title: "${title}"
+DOI: ${doiLink}
 
+Please search for this exact paper. If you find the abstract for THIS title, summarize it. If the abstract is missing or the search results talk about a different paper, use the mandatory escape hatch phrase.`;
     try {
         const explanation = await callBackend(userPrompt, systemPrompt, true);
         const formattedExplanation = formatAIResponse(explanation);
