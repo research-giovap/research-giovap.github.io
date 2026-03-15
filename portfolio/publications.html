@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | Giovanni Pasini</title>
+    <link href="[https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap)" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="en">
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">GP.</a>
+            <div style="display: flex; align-items: center;">
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">
+                        <span class="lang-en">About</span><span class="lang-it">Chi Sono</span>
+                    </a>
+                    <a href="publications.html" class="nav-link active">
+                        <span class="lang-en">Publications</span><span class="lang-it">Pubblicazioni</span>
+                    </a>
+                    <a href="cv.html" class="nav-link">CV</a>
+                </div>
+                
+                <div class="controls">
+                    <button class="icon-btn" onclick="toggleLanguage()" aria-label="Toggle Language">
+                        <span class="lang-en">IT</span><span class="lang-it">EN</span>
+                    </button>
+                    <button class="icon-btn" onclick="toggleTheme()" aria-label="Toggle Dark Mode">
+                        <svg id="moon-icon" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                        <svg id="sun-icon" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block;"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-section active">
+            <h1 class="reveal"><span class="lang-en">Publications</span><span class="lang-it">Pubblicazioni</span></h1>
+            <p class="subtitle reveal">
+                <span class="lang-en">Complete list of peer-reviewed articles and conference proceedings.</span>
+                <span class="lang-it">Elenco completo degli articoli sottoposti a revisione paritaria e atti di conferenze.</span>
+            </p>
+
+            <h2 class="reveal">2025</h2>
+            
+            <div class="card reveal pub-card">
+                <h3 id="pub-new-title">Radiomics-based machine learning models for predicting genomic alterations in metastatic prostate cancer using PSMA PET imaging: a pilot study</h3>
+                <p style="color: var(--text-muted); margin-bottom: 0.8rem;">Pasini, G., et al. &mdash; <em>Springer (2025)</em></p>
+                <div style="display: flex; gap: 0.8rem; align-items: center; flex-wrap: wrap;">
+                    <a href="[https://link.springer.com/article/10.1186/s41824-025-00280-6](https://link.springer.com/article/10.1186/s41824-025-00280-6)" target="_blank" class="doi-btn">
+                        <svg xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                        DOI
+                    </a>
+                    <button class="ai-btn" onclick="simplifyText('pub-new-title', null, 'pub-new-result')">✨ <span class="lang-en">Explain with AI</span><span class="lang-it">Spiega con l'AI</span></button>
+                </div>
+                <div id="pub-new-result" class="simplify-result"></div>
+            </div>
+
+            <div class="card reveal pub-card">
+                <h3 id="pub1-title">A Fully Automatic Patch-Based Deep Learning Pipeline for Mass and Microcalcification Detection in Mammography: A Preliminary Study</h3>
+                <p style="color: var(--text-muted); margin-bottom: 0.8rem;">Pasini, G., Lauciello, N., Finti, A., Russo, G., Marinozzi, F., Bini, F., Stefano, A. &mdash; <em>ICIAP 2025 Workshops</em></p>
+                <div style="display: flex; gap: 0.8rem; align-items: center; flex-wrap: wrap;">
+                    <a href="[https://doi.org/10.1007/978-3-032-11317-7_13](https://doi.org/10.1007/978-3-032-11317-7_13)" target="_blank" class="doi-btn">
+                        <svg xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                        DOI
+                    </a>
+                    <button class="ai-btn" onclick="simplifyText('pub1-title', null, 'pub1-result')">✨ <span class="lang-en">Explain with AI</span><span class="lang-it">Spiega con l'AI</span></button>
+                </div>
+                <div id="pub1-result" class="simplify-result"></div>
+            </div>
+
+            <!-- ALL OTHER PUBLICATION CARDS GO HERE (Omitted for brevity, paste from index.html) -->
+        </section>
+    </main>
+
+    <footer class="reveal">
+        <p>&copy; <span id="year"></span> Giovanni Pasini. <span class="lang-en">All rights reserved.</span><span class="lang-it">Tutti i diritti riservati.</span></p>
+    </footer>
+
+    <!-- Gemini Chat Widget Goes Here (Paste from index.html) -->
+
+    <script src="js/main.js"></script>
+    <script src="js/ai-assistant.js"></script>
+</body>
+</html>
