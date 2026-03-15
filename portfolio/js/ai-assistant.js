@@ -20,6 +20,15 @@ async function callBackend(prompt, systemInstruction, useSearch = false) {
     return data.text;
 }
 
+// Helper function to robustly format Gemini's Markdown output
+function formatAIResponse(text) {
+    return text
+        // Matches **bold text** even if it spans multiple lines
+        .replace(/\*\*([\s\S]*?)\*\*/g, '<strong>$1</strong>')
+        // Converts standard newlines into HTML line breaks
+        .replace(/\n/g, '<br>');
+}
+
 /* Explainer Feature */
 async function simplifyText(titleId, descId, resultId) {
     const titleContainer = document.getElementById(titleId);
@@ -47,7 +56,7 @@ async function simplifyText(titleId, descId, resultId) {
 
     try {
         const explanation = await callBackend(userPrompt, systemPrompt, true);
-        const formattedExplanation = explanation.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
+        const formattedExplanation = formatAIResponse(explanation);
         resultDiv.innerHTML = `<strong>✨ AI:</strong> ${formattedExplanation}`;
     } catch (error) {
         resultDiv.innerHTML = `<span style="color: #ef4444;">Error: ${error.message}</span>`;
@@ -84,7 +93,7 @@ async function sendMessage() {
     chatMessages.appendChild(typingIndicator);
     chatMessages.scrollTop = chatMessages.scrollHeight;
 
-    // Upgraded Assistant Context to include the CV page data and Search instructions
+    // Upgraded Assistant Context
     const assistantContext = `
         You are the official AI Research Assistant on the personal website of Giovanni Pasini.
         Base your knowledge on the hardcoded facts below (which represent his official CV page), and actively USE THE GOOGLE SEARCH TOOL to find accurate, up-to-date information when asked for details outside of this prompt.
@@ -102,6 +111,7 @@ async function sendMessage() {
         SEARCH INSTRUCTIONS (MANDATORY WHEN ASKED):
         1. If asked about his CV, experience, or profile, you MUST utilize the core facts above (from his website's CV page, live at: https://pasinigiovanni.com/cv.html ), AND use the Google Search tool to search his LinkedIn (https://it.linkedin.com/in/giovap), his ResearchGate (https://www.researchgate.net/profile/Giovanni-Pasini-2), or use the exact search queries: "Giovanni Pasini Sapienza University of Rome" or "Giovanni Pasini National Research Council".
         2. If asked about "matRadiomics", you MUST search the web for his paper "matRadiomics: A Novel and Complete Radiomics Framework, from Image Visualization to Predictive Model" or search its exact DOI (10.3390/jimaging8080221) to provide technical details.
+        3. If asked about his institutional collaborations, you MUST search the web for his published papers (using his name or DOIs) to identify the affiliations of his co-authors, as his institutional collaborations are primarily documented through his peer-reviewed research.
 
         RULES:
         - Be polite, concise, and professional.
@@ -110,7 +120,6 @@ async function sendMessage() {
     `;
 
     try {
-        // We changed 'false' to 'true' here to allow the Chatbot to use the Google Search tool
         const response = await callBackend(text, assistantContext, true);
         typingIndicator.style.display = 'none';
         appendMessage(response, 'ai');
@@ -123,7 +132,7 @@ async function sendMessage() {
 function appendMessage(text, sender) {
     const msgDiv = document.createElement('div');
     msgDiv.className = `msg ${sender}`;
-    msgDiv.innerHTML = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
+    msgDiv.innerHTML = sender === 'user' ? text : formatAIResponse(text);
     chatMessages.insertBefore(msgDiv, typingIndicator);
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
