@@ -49,18 +49,16 @@ async function simplifyText(titleId, descId, resultId) {
     resultDiv.style.display = 'block';
     resultDiv.innerHTML = currentLang === 'en' ? '<em>Searching the DOI link to generate a scientific summary...</em>' : '<em>Ricerca del link DOI per generare un riassunto scientifico...</em>';
 
-    // Balanced prompt: Strict on the title, but relaxed on author formatting
-    const systemPrompt = `You are a scientific AI assistant. Your job is to summarize the specific academic paper requested.
-    1. Use the Google Search tool to find the abstract or full text using the provided Title and DOI.
-    2. Read the search results carefully. If the search results describe the EXACT paper requested, provide a concise 3-4 sentence summary of its objective and findings using professional terminology.
-    3. ANTI-HALLUCINATION RULE: If the search results describe a different paper, a different software, or if the actual abstract is hidden behind a paywall and not visible in the snippets, you MUST NOT guess.
-    4. MANDATORY ESCAPE HATCH: If you cannot read the actual abstract of this exact paper in your search, you MUST reply exactly with: "${currentLang === 'en' ? 'I could not find the abstract for this specific paper online to provide a reliable summary.' : 'Non sono riuscito a trovare il riassunto di questo documento online per fornire una sintesi affidabile.'}"
-    5. You MUST reply entirely in ${currentLang === 'en' ? 'English' : 'Italian'}.`;
+    const systemPrompt = `You are a strict data extractor. Your ONLY job is to read Google Search snippets.
+    RULES:
+    1. You must ONLY use the text visible in the Google Search results.
+    2. If the search snippets do not contain a clear abstract for the specific paper requested, you MUST reply exactly with: "${currentLang === 'en' ? 'I could not find the abstract for this specific paper online to provide a reliable summary.' : 'Non sono riuscito a trovare il riassunto di questo documento online per fornire una sintesi affidabile.'}"
+    3. DO NOT use your internal knowledge to guess, invent, or fill in the blanks.
+    4. You MUST reply entirely in ${currentLang === 'en' ? 'English' : 'Italian'}.`;
     
-    const userPrompt = `Target Paper Title: "${title}"
-DOI: ${doiLink}
-
-Please search for this exact paper. If you find the abstract for THIS title, summarize it. If the abstract is missing or the search results talk about a different paper, use the mandatory escape hatch phrase.`;
+    const userPrompt = `Search this DOI: ${doiLink}
+    Target Title: "${title}"
+    If the abstract for this specific title is visible in the search results, summarize it in 3 sentences. If not, output the exact fallback phrase.`;
     try {
         const explanation = await callBackend(userPrompt, systemPrompt, true);
         const formattedExplanation = formatAIResponse(explanation);

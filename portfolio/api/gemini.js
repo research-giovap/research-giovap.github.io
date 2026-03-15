@@ -15,9 +15,10 @@ export default async function handler(req, res) {
 
     const ai = new GoogleGenAI({ apiKey: apiKey });
 
+   // Setup the configuration object
     const config = {
         systemInstruction: systemInstruction,
-        temperature: 1.0 
+        temperature: 0.1 // CRITICAL: Set to 0.1 to stop Flash-Lite from hallucinating
     };
 
     if (useSearch) {
