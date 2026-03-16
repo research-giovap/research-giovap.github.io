@@ -32,7 +32,7 @@
 /* --- Global Reset & Typography --- */
 html {
     background-color: var(--bg-main); 
-    overscroll-behavior-y: none;
+    overscroll-behavior-y: auto; 
 }
 
 * {
