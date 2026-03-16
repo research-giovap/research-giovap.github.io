@@ -85,13 +85,10 @@ function triggerReveal() {
     }, 50);
 }
 
-// --- Smart Navbar & Chat Widget Scroll Logic ---
+// --- Smart Navbar Logic ---
 let lastScrollTop = 0;
-
 window.addEventListener('scroll', () => {
     let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    
-    // 1. Navbar Logic (Hide on scroll down, show on scroll up)
     const nav = document.querySelector('nav');
     if (nav) {
         if (currentScroll > lastScrollTop && currentScroll > 100) {
@@ -101,18 +98,20 @@ window.addEventListener('scroll', () => {
         }
     }
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-
-    // 2. Chat Widget Logic
-    const chatWidget = document.querySelector('.chat-widget');
-    const chatWindow = document.getElementById('chat-window');
-    
-    if (chatWidget && chatWindow) {
-        if (chatWindow.classList.contains('open')) {
-            chatWidget.classList.add('visible');
-        } else if (currentScroll > 200) {
-            chatWidget.classList.add('visible');
-        } else {
-            chatWidget.classList.remove('visible');
-        }
-    }
 });
+
+// --- Abstract Accordion Logic ---
+function toggleAbstract(id, btn) {
+    const content = document.getElementById(id);
+    const isOpen = content.classList.contains('open');
+    
+    // Close all other abstracts (optional, remove if you want multiple open at once)
+    document.querySelectorAll('.abstract-wrapper').forEach(el => el.classList.remove('open'));
+    document.querySelectorAll('.abstract-btn').forEach(el => el.classList.remove('active'));
+
+    // Toggle the clicked one
+    if (!isOpen) {
+        content.classList.add('open');
+        btn.classList.add('active');
+    }
+}
