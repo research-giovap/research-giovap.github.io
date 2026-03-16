@@ -331,31 +331,37 @@ footer { text-align: center; padding: 2rem; border-top: 1px solid var(--border-c
 @media (max-width: 768px) {
     .nav-container { 
         padding: 1rem; 
-        flex-wrap: wrap; 
+        flex-direction: column; /* Stacks the Logo above the menu */
+        gap: 0.8rem;
     }
     .nav-container > div {
-        flex-wrap: wrap;
+        display: flex;
+        flex-wrap: nowrap; /* Forces links and controls to stay on one row */
         justify-content: center;
+        align-items: center;
         width: 100%;
-        margin-top: 0.5rem;
+        margin-top: 0;
     }
     .nav-links { 
-        display: flex; /* Brings the menu back! */
-        width: 100%;
+        width: auto; /* Removes the 100% width that pushed controls down */
         justify-content: center;
-        gap: 1.5rem; 
-        order: 2;
-        margin-top: 1rem;
-        font-size: 0.95rem;
+        gap: 0.8rem; /* Tighter gap to fit smaller phone screens */
+        order: unset; /* Removes the re-ordering */
+        margin-top: 0;
+        font-size: 0.85rem; /* Slightly smaller text for long words like 'Pubblicazioni' */
     }
     .controls { 
-        border-left: none; 
-        padding-left: 0; 
-        margin-left: 0; 
-        order: 1;
+        order: unset;
+        /* Restores the separator for mobile */
+        border-left: 1px solid var(--border-color); 
+        padding-left: 0.8rem; 
+        margin-left: 0.8rem; 
+        gap: 0.5rem;
     }
-    main { margin-top: 160px; }
+    .icon-btn {
+        width: 32px; /* Slightly smaller buttons to save horizontal space */
+        height: 32px;
+    }
+    main { margin-top: 140px; }
     h1 { font-size: 2.5rem; }
-    .chat-widget { right: 1rem; bottom: 1rem; }
-    .chat-window { width: 92vw; height: 70vh; right: -5px; bottom: 80px; }
 }
